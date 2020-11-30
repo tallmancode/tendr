@@ -1,0 +1,13 @@
+@mixin btn-colours {
+    @each $color, $value in $button-colors {
+        .btn-#{$color} {
+            color: map-get($value, 'text-color');
+            background-color: map-get($value, 'background');
+            &:hover{
+                color: map-get($value, 'hover-text-color');
+                background-color: map-get($value, 'hover-bg');
+            }
+        }
+    }
+}
+

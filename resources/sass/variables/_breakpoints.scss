@@ -1,0 +1,12 @@
+//xs: protrait on mobile
+//sm: landscape on mobile
+//md: protrait on Tablet
+//lg: landscape on Tablet
+//xl: desktop
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1100px,
+  xl: 1200px
+) !default;

@@ -1,0 +1,7 @@
+@mixin make-header-height($header-heights: $header-top-heights, $breakpoints: $grid-breakpoints){
+    @each $breakpoint, $container-height in $header-heights {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+           height: $container-height;
+        }
+    }
+}
