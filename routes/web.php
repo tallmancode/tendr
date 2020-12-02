@@ -7,10 +7,10 @@ Route::group(['domain' => env('APP_DOMAIN'), 'middleware' => ['web']], function 
     Route::get('/', function () {
         return view('frontend.index');
     })->name('home');
-
 });
 
 Route::group(['domain' => 'app.'.env('APP_DOMAIN'), ], function () {
+    dump('app.'.env('APP_DOMAIN'));
     Route::group(['middleware' => ['web', 'auth']], function () {
         Route::view('/test', 'app.index')->name('backend');
     });
