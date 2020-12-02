@@ -9,19 +9,15 @@
                         </a>
                     </div>
                     <div class="header__left">
-                        <a @click="showLogin" class="logo">
-                            sign in
+                        <a  @click="logout">
+                            Logout
                         </a>
                     </div>
                 </div>
             </div>
         </header>
         <section class="content">
-            <HomeHero></HomeHero>
-            <!-- <div class="hero">
-                <img src="/media/banners/banner-1.jpg" alt="">
-            </div> -->
-            <dialogs-wrapper transition-name="slide" wrapper-name="default"></dialogs-wrapper>
+
         </section>
         <footer>
 
@@ -29,20 +25,19 @@
     </div>
 </template>
 <script>
-import { create } from 'vue-modal-dialogs'
-import LoginSlide from '../slides/LoginSlide'
-const LoginSlideAction = create({component:LoginSlide})
-
-import HomeHero from './sliders/HomeHero'
 
 export default {
     name: 'Frontend',
     components: {
-        HomeHero
+
     },
     methods: {
-        showLogin() {
-            LoginSlideAction();
+        logout(){
+            axios
+            .post('/logout')
+            .then((resp) => {
+                console.log(resp)
+            })
         }
     }
 }

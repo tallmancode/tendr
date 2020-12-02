@@ -1,0 +1,42 @@
+.slide{
+    &__panel{
+        top: $header-height;
+        bottom: 0;
+        position: fixed;
+        width: 40%;
+        background-color: #fff;
+        &.left{
+            left:0;
+        }
+        &.right{
+            right: 0;
+        }
+        .slide{
+            &__header{
+                position: relative;
+                padding: $md-space;
+                h3{
+                    margin: 0;
+                    font-weight: normal;
+                    font-size: 2rem;
+                }
+            }
+            &__close{
+                position: absolute;
+                top: 0;
+                right: 0;
+                text-decoration: none;
+                padding: 10px;
+                font-size: 30px;
+                color: $font-colour;
+                opacity: 1;
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+            &__body{
+                padding: $md-space;
+            }
+        }
+    }
+}

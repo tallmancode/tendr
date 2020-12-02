@@ -1,0 +1,27 @@
+header{
+    width:100%;
+    background-color: $header-colour;
+    height: $header-height;
+    .header{
+        &__top{
+            padding: $header-top-padding;
+            display: flex;
+            &>div{
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .header__left{
+                .logo{
+                    img{
+                        max-width: 100px;
+                    }
+                }
+            }
+            .header__right{
+
+            }
+        }
+    }
+}

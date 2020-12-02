@@ -9,12 +9,17 @@
     <meta name="author" content="TallmanCode">
     <meta name="keyword" content="">
     <title>tendR</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('media/favicons/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('media/favicons/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('media/favicons/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('media/favicons/site.webmanifest') }}">
-    <link rel="mask-icon" href="{{ asset('media/favicons/safari-pinned-tab.svg') }}" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#ffc40d">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('media/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('media/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('media/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('media/favicon/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ asset('media/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <link rel="shortcut icon" href="{{ asset('media/favicon/favicon.ico') }}">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="{{ asset('/media/favicon/browserconfig.xml') }}">
+    <meta name="theme-color" content="#ffffff">
+
+
     <meta name="theme-color" content="#ffffff">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('template-css')

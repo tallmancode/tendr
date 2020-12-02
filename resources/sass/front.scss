@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
 @import 'functions/functions';
 
 //variables
 @import 'variables/breakpoints';
 @import 'variables/grid';
+@import 'variables/colours';
+@import 'variables/header';
+@import 'variables/font';
 
 //mixins
 @import 'mixins/breakpoints';
@@ -10,4 +15,44 @@
 @import 'mixins/grid';
 
 //components
-@import 'components/grid'
+@import 'components/grid';
+@import 'components/header';
+@import 'components/slide-panels';
+@import 'components/transitions';
+@import 'components/forms';
+@import 'components/buttons';
+
+//fonts
+@import './fonts//front-icons.scss';
+
+
+a{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero{
+    height: calc(100vh - #{$header-height});
+    overflow: hidden;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        max-width: 100%;
+        animation: hero-move 30s linear infinite;
+    }
+}
+
+@keyframes hero-move {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}

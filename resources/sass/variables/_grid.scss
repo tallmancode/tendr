@@ -1,5 +1,10 @@
 $enable-grid-classes:                         true !default;
 
+$sm-space : 8px;
+$md-space : 16px;
+$lg-space : 24px;
+$xl-space : 32px;
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -21,6 +26,6 @@ $grid-breakpoints: (
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
 $grid-columns:       12 !default;
-$grid-gutter-width:  30px !default;
+$grid-gutter-width:  32px !default;
 $grid-row-columns:   6 !default;
 
