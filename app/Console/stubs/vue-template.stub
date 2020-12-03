@@ -1,0 +1,17 @@
+<?php
+<template>
+    <!-- Your {Component} component's template -->
+</template>
+
+<script>
+    export default {
+        name: {{class}},
+        data() {
+            return {
+                //
+            };
+        }
+    }
+</script>
+
+

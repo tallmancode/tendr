@@ -17,7 +17,7 @@
             </div>
         </header>
         <section class="content">
-
+            <router-view></router-view>
         </section>
         <footer>
 
@@ -33,11 +33,7 @@ export default {
     },
     methods: {
         logout(){
-            axios
-            .post('/logout')
-            .then((resp) => {
-                console.log(resp)
-            })
+           this.$store.dispatch('auth/logOut')
         }
     }
 }

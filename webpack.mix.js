@@ -17,3 +17,13 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/front.scss', 'public/css')
     .copyDirectory('resources/assets/media', 'public/media');
+
+if (mix.inProduction()) {
+    mix.version();
+}
+
+if (!mix.inProduction()) {
+    mix.webpackConfig({
+        devtool: 'source-map',
+    }).sourceMaps()
+}

@@ -24,6 +24,10 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+//Vuex
+import store from './vuex/store';
+
+import router from './router/routes';
 
 import * as ModalDialogs from 'vue-modal-dialogs'
 
@@ -34,11 +38,18 @@ import TmcSnitch from 'tmc-snitch';
 
 Vue.use(TmcSnitch, {
     globalDebug: true,
-    debugGroups: [
-        'checkout',
-    ],
+    debugGroups: [],
 });
 
 const app = new Vue({
     el: '#app',
+    store,
+    router,
+    created() {
+         store.dispatch('auth/me').then((resp) => {
+            const user = resp;
+            store.dispatch('company/getCompany', user.company_id)
+        })
+    }
+
 });

@@ -11,7 +11,7 @@ Route::group(['domain' => env('APP_DOMAIN'), 'middleware' => ['web']], function 
 
 Route::group(['domain' => 'app.'.env('APP_DOMAIN'), ], function () {
     Route::group(['middleware' => ['web', 'auth']], function () {
-        Route::view('/test', 'app.index')->name('backend');
+        Route::view('/{any}', 'app.index')->where('any', '^(?!api).*$')->name('backend');
     });
 });
 

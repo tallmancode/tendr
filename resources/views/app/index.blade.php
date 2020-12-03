@@ -5,7 +5,7 @@
 @endsection
 
 @section('body')
-    <Backend></Backend>
+    <router-view></router-view>
 @endsection
 
 @section('template-js')
