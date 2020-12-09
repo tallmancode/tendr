@@ -16,7 +16,7 @@
                 </div>
             </div>
         </header>
-        <section class="content">
+        <section class="content full">
             <HomeHero></HomeHero>
             <!-- <div class="hero">
                 <img src="/media/banners/banner-1.jpg" alt="">

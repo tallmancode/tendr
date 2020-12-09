@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['domain' => env('APP_DOMAIN'), 'middleware' => ['web']], function () {
+Route::group(['domain' => env('APP_DOMAIN'), 'middleware' => ['web', 'guest']], function () {
     Route::get('/', function () {
         return view('frontend.index');
     })->name('home');

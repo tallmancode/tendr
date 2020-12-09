@@ -1,11 +1,10 @@
-<?php
 <template>
-    <!-- Your {Component} component's template -->
+    <div> </div>
 </template>
 
 <script>
     export default {
-        name: {{class}},
+        name: '{{class}}',
         data() {
             return {
                 //

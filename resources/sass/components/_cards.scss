@@ -1,0 +1,22 @@
+.card{
+    padding: 16px;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    min-height: 300px;
+    height: 1px;
+    display: flex;
+    flex-flow: column;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+    &__header{
+
+    }
+    &__body{
+        height: 100%;
+    }
+    &__footer{
+
+    }
+    &.full{
+        height: 100%;
+    }
+}

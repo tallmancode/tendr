@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('template-css')
-    <link href="{{ mix('css/front.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/backend.css') }}" rel="stylesheet">
 @endsection
 
 @section('body')

@@ -1,5 +1,15 @@
 @import './base.scss';
 
+.icn-cart:before {
+    content: "\e93a";
+}
+.icn-cogs:before {
+    content: "\e995";
+}
+.icn-stats-bars:before {
+    content: "\e99c";
+}
 .icn-clear:before {
     content: "\e900";
 }
+

@@ -41,6 +41,10 @@ Vue.use(TmcSnitch, {
     debugGroups: [],
 });
 
+import Tabs from './plugins/tabs/src/index';
+
+Vue.use(Tabs);
+
 const app = new Vue({
     el: '#app',
     store,

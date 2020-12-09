@@ -16,9 +16,33 @@
                 </div>
             </div>
         </header>
-        <section class="content">
-            <router-view></router-view>
+        <section class="sidebar">
+            <ul class="sidebar__nav">
+                <li class="sidebar__nav--item">
+                    <router-link :to="{name: 'Dashboard'}">
+                        <span class="sidebar__nav--icon">
+                            <i class="icn icn-stats-bars"></i>
+                        </span>Dashboard
+                    </router-link>
+                </li>
+                 <li class="sidebar__nav--item">
+                    <router-link :to="{name: 'Settings'}">
+                        <span class="sidebar__nav--icon">
+                            <i class="icn icn-cogs"></i>
+                        </span>Settings
+                    </router-link>
+                </li>
+            </ul>
         </section>
+        <section class="main has-sidebar">
+            <div class="content">
+                <transition name="fade" mode="out-in">
+                    <router-view/>
+                </transition>
+                </div>
+            <div class="footer">s</div>
+        </section>
+
         <footer>
 
         </footer>
