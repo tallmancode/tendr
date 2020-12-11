@@ -28,3 +28,9 @@ if (!mix.inProduction()) {
         devtool: 'source-map',
     }).sourceMaps()
 }
+
+
+mix.browserSync({
+    proxy: 'app.tendr.test',
+    port: 8000,
+});

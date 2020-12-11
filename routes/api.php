@@ -23,7 +23,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
 Route::group(['namespace' => 'App\Http\Controllers\\', 'middleware' => ['auth:sanctum']], function () {
     Route::resource('company', 'CompanyController');
-    Route::post('/settings/general', 'SettingsController');
+    Route::post('/settings/general', 'SettingsController@create');
+    Route::get('/settings/general', 'SettingsController@show');
 });
 
 

@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Settings;
+
+use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Contracts\Support\Jsonable;
+use Illuminate\Contracts\Support\Responsable;
+use ReflectionClass;
+use ReflectionProperty;
+use Spatie\LaravelSettings\Factories\SettingsRepositoryFactory;
+use Spatie\LaravelSettings\Settings;
+
+class TendrSettings extends Settings
+{
+    public static function group(): string
+    {
+        return 'default';
+    }
+
+    public static function model(): string
+    {
+        return 'default';
+    }
+
+    public function save(): self
+    {
+        dump($this);
+        return SettingsMapper::create(static::class)->save($this);
+    }
+}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Settings\GeneralSettings;
 use App\Settings\Settings;
 use Illuminate\Http\Request;
+use Tallmancode\TendrSettings\Settings as TendrSettingsSettings;
 
 class SettingsController extends Controller
 {
@@ -13,12 +14,22 @@ class SettingsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(GeneralSettings $settings, Request $request)
+    public function create(GeneralSettings $settings, Request $request)
     {
-        //dump($request);
-        //dump($request->input('name'));
         $settings->site_name = $request->site_name;
-
         $settings->save();
+
+        return $settings->get();
+    }
+
+
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show(GeneralSettings $settings)
+    {
+        return $settings->get();
     }
 }

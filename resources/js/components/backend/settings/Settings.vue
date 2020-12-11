@@ -6,7 +6,7 @@
                     <General></General>
                 </tab>
                 <tab name="WHatver">
-                    adasdasdasdasd
+                    adasdasdasdasdsadas
                 </tab>
             </tabs>
         </div>

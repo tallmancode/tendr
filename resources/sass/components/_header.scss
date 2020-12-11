@@ -12,6 +12,13 @@ header{
                 align-items: center;
                 justify-content: space-between;
             }
+            a{
+                transition: color 0.4s ease-in-out;
+                color: white;
+                &:hover{
+                    color: #3c4b64;
+                }
+            }
             .header__left{
                 .logo{
                     img{

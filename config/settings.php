@@ -3,6 +3,11 @@
 use App\Settings\GeneralSettings;
 
 return [
+    'defaults' => [
+        'general' => [
+            'test' => 'whatevr'
+        ]
+    ],
 
     /*
      * You can register all the settings classes here.
@@ -30,12 +35,12 @@ return [
      */
     'repositories' => [
         'database' => [
-            'type' => Spatie\LaravelSettings\SettingsRepositories\DatabaseSettingsRepository::class,
+            'type' => Tallmancode\TendrSettings\SettingsRepositories\DatabaseSettingsRepository::class,
             'model' => null,
             'connection' => null,
         ],
         'redis' => [
-            'type' => Spatie\LaravelSettings\SettingsRepositories\RedisSettingsRepository::class,
+            'type' => Tallmancode\TendrSettings\SettingsRepositories\RedisSettingsRepository::class,
             'connection' => null,
             'prefix' => null,
         ],
@@ -47,9 +52,9 @@ return [
      * when they occur in a settings class.
      */
     'global_casts' => [
-        DateTimeInterface::class => Spatie\LaravelSettings\SettingsCasts\DateTimeInterfaceCast::class,
-        DateTimeZone::class => Spatie\LaravelSettings\SettingsCasts\DateTimeZoneCast::class,
-        Spatie\DataTransferObject\DataTransferObject::class => Spatie\LaravelSettings\SettingsCasts\DtoCast::class,
+        DateTimeInterface::class => Tallmancode\TendrSettings\SettingsCasts\DateTimeInterfaceCast::class,
+        DateTimeZone::class => Tallmancode\TendrSettings\SettingsCasts\DateTimeZoneCast::class,
+        Spatie\DataTransferObject\DataTransferObject::class => Tallmancode\TendrSettings\SettingsCasts\DtoCast::class,
     ],
 
     /*

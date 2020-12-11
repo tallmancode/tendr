@@ -52,7 +52,11 @@ const app = new Vue({
     created() {
          store.dispatch('auth/me').then((resp) => {
             const user = resp;
-            store.dispatch('company/getCompany', user.company_id)
+            Promise.all([
+                store.dispatch('company/getCompany', user.company_id),
+                store.dispatch('settings/init')
+            ])
+
         })
     }
 

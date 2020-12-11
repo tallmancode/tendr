@@ -17,7 +17,12 @@
         "laravel/telescope": "^4.3",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.1",
-        "spatie/laravel-settings": "^1.0"
+        "ext-json": "*",
+        "illuminate/database": "^7.0|^8.0",
+        "doctrine/dbal" : "^2.12",
+        "phpdocumentor/type-resolver": "^1.4",
+        "spatie/data-transfer-object": "^2.0",
+        "spatie/temporary-directory": "^1.2"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -40,7 +45,8 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "Tallmancode\\TendrSettings\\": "packages/tendr-settings/src/"
         }
     },
     "autoload-dev": {

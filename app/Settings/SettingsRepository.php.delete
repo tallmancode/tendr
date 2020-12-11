@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Settings;
+
+use DB;
+
+use App\Models\Settings\SettingsProperty;
+use Spatie\LaravelSettings\SettingsRepositories\DatabaseSettingsRepository;
+
+class SettingsRepository extends DatabaseSettingsRepository
+{
+    public function updatePayload(string $group, string $name, $value, $model): void
+    {
+        $this->propertyModel::on($this->connection)
+            ->where('group', $group)
+            ->where('name', $name)
+            ->update([
+                'payload' => json_encode($value),
+                'model' => $model
+            ]);
+    }
+
+    public function getInGroup(string $group, $model): array
+    {
+        /**
+         * @var \Spatie\LaravelSettings\Models\SettingsProperty $temp
+         * @psalm-suppress UndefinedClass
+         */
+        $temp = new $this->propertyModel;
+
+        return DB::connection($this->connection ?? $temp->getConnectionName())
+            ->table($temp->getTable())
+            ->where('group', $group)
+            ->where('model', $model)
+            ->get(['name', 'payload'])
+            ->mapWithKeys(function ($object) {
+                return [$object->name => json_decode($object->payload, true)];
+            })
+            ->toArray();
+    }
+}
